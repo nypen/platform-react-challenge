@@ -11,14 +11,12 @@ export const CardsList = <T extends { id: string }>({ items, renderCard }: Cards
     }
 
     return (
-        <div>
-            <div className='flex flex-wrap'>
-                {items.map((card) => (
-                    <div key={card.id} className='flex p-4 md:w-1/2 lg:w-1/3'>
-                        {renderCard(card)}
-                    </div>
-                ))}
-            </div>
+        <div className='flex flex-wrap'>
+            {items.map((card) => (
+                <div key={card.id} className='flex p-4 md:w-1/2 lg:w-1/3'>
+                    {renderCard(card)}
+                </div>
+            ))}
         </div>
     );
 };
