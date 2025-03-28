@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
 import { AppRoute } from './routes'
 import { PageLayout } from './components/common/pageLayout'
+import { CatsPage } from './components/pages/cats/catsPage'
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route element={<PageLayout />}>
-                    <Route path={AppRoute.Cats} element={'Cats'} />
+                    <Route path={AppRoute.Cats} element={<CatsPage />} />
                     <Route path={AppRoute.Breeds} element={'Breeds'} />
                     <Route path={AppRoute.Favourites} element={'Favourites'} />
                 </Route>
