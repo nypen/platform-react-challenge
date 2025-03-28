@@ -28,4 +28,6 @@ const appLinks: LinkItem[] = [
     },
 ];
 
-export { AppRoute, appLinks };
+const getImageUrl = (id: string) => `${window.location.origin}${AppRoute.Cats}?id=${id}`;
+
+export { AppRoute, appLinks, getImageUrl };

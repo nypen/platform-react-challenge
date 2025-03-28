@@ -5,6 +5,7 @@ import { CardsList } from '../../common/cardsList';
 import { Loading } from '../../core/loading';
 import { FavouriteButton } from '../../common/favouriteButton';
 import { CopyButton } from '../../common/copyButton';
+import { getImageUrl } from '../../../routes';
 
 const FavouritesPage = () => {
 	const { data: favourites, isLoading, isError, error, refetch } = useFavourites();
@@ -38,7 +39,7 @@ const FavouritesPage = () => {
 									isFavourite
 									onClick={() => deleteFavourite(item.id)}
 								/>,
-								<CopyButton tooltip='Copy URL' textToCopy={item.imageUrl} />,
+								<CopyButton tooltip='Copy URL' textToCopy={getImageUrl(item.imageId)} />,
 							]}
 						/>
 					)}
