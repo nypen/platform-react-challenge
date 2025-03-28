@@ -4,18 +4,18 @@ import { AppRoute } from './routes'
 import { PageLayout } from './components/common/pageLayout'
 import { CatsPage } from './components/pages/cats/catsPage'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { BreedsPage } from './components/pages/breeds/breedsPage'
 
 const queryClient = new QueryClient({});
 
 function App() {
-
     return (
         <QueryClientProvider client={queryClient}>
             <BrowserRouter>
                 <Routes>
                     <Route element={<PageLayout />}>
                         <Route path={AppRoute.Cats} element={<CatsPage />} />
-                        <Route path={AppRoute.Breeds} element={'Breeds'} />
+                        <Route path={AppRoute.Breeds} element={<BreedsPage />} />
                         <Route path={AppRoute.Favourites} element={'Favourites'} />
                     </Route>
                 </Routes>
