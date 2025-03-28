@@ -1,11 +1,11 @@
 import { ReactNode } from 'react';
 
-interface ImagesListProps<T> {
+interface CardsListProps<T> {
     items: T[];
     renderCard: (item: T) => ReactNode;
 }
 
-export const CardsList = <T extends { id: string }>({ items, renderCard }: ImagesListProps<T>) => {
+export const CardsList = <T extends { id: string }>({ items, renderCard }: CardsListProps<T>) => {
     if (!items?.length) {
         return null;
     }

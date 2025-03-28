@@ -45,7 +45,7 @@ const CatImageModal = ({ id, onClose }: CatImageModalProps) => {
 		}
 
 		if (isError) {
-			return <Typography variant='error'>Sorry no image found {error.message}</Typography>;
+			return <Typography variant='error'>No image found: {error.message}</Typography>;
 		}
 
 		return (
