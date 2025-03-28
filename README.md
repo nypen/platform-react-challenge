@@ -19,3 +19,30 @@ We give you a lot of freedom in technologies and ways of doing things. We only i
 
 Once you have built your app, share your code in the mean suits you best
 Good luck, potential colleague!
+
+## Implementation
+
+### Tech Stack
+
+The project was built with `React`, `Typescript` and `Vite`.
+
+`Tailwind-css` and `DaisyUI` were used for styling.
+
+`axios` and `React Query` were used for interacting with the Cat API.
+
+No framework was used for state management as there was no need to maintain a state to cover the requirements.
+
+### Running the app
+
+To run the app:
+
+1. First [generate an API key](https://thecatapi.com/signup) for Cat API and add it in `.env` file.
+
+```
+VITE_CAT_API_KEY=myCatApiKey
+```
+
+2. Open a terminal and run `npm i`
+3. Run `npm run dev`
+
+The app is served at `http://localhost:5173/`
